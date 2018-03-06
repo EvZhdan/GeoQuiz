@@ -46,7 +46,7 @@ public class QuizActivity extends AppCompatActivity {
             mCurrentIndex=savedInstanceState.getInt(KEY_INDEX,0);
         }
 
-       // mQuestionTextView = (TextView) findViewById(R.id.text);
+        mQuestionTextView = (TextView) findViewById(R.id.text);
         updateQuestion();
 
         mTrueButton = (Button) findViewById(R.id.id_true_button);
@@ -113,7 +113,8 @@ public class QuizActivity extends AppCompatActivity {
         });
     }
     private void updateQuestion(){
-        int question = mQuestionBank[mCurrentIndex].getmTextResId();
+//        Log.d(TAG,"Updating question text", new Exception());
+       int question = mQuestionBank[mCurrentIndex].getmTextResId();
         mQuestionTextView.setText(question);
     }
 
